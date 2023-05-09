@@ -1,9 +1,19 @@
 const http = require('http')
 const fs = require('fs')
+const _ = require('lodash')
 
 const server = http.createServer((req, res)=>{
     // const io = require('socket.io')
     console.log(req.url, req.method)
+
+
+    //  lodash
+
+    const num = _.random(0, 20);
+
+    console.log(num)
+
+
     
 
     // set header content type
@@ -55,14 +65,6 @@ const server = http.createServer((req, res)=>{
 
 })
 
-server.listen(3000,
-            res.end(data)
-    }
-    })
-
-
-
-})
 
 server.listen(3001, 'localhost',() => {
     console.log('listening for request on port 3000')
